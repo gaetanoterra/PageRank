@@ -3,15 +3,12 @@ import sys
 from operator import add
 from pyspark import SparkContext
 
-
 #function that selects title and links of each node, returns => title, links
-
 def findTitleAndLinks(input):
     title = re.findall("<title>(.*?)</title>", input)
     links = re.findall("\\[\\[(.*?)\\]\\]", input)
 
     return title[0], links
-
 
 #function that assigns an initial value for the algorithm and selects node and links, returns => title, links, initial_page_rank
 def contributeCalculus(line):
