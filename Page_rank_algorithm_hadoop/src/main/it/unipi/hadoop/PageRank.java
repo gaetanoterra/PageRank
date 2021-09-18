@@ -13,7 +13,7 @@ public class PageRank {
         double alpha = 0.15;
 
         if(otherArgs.length != 3) {
-            System.err.println("Usage: PageRank <input> <base output> <# of iterations> <alpha>");
+            System.err.println("Usage: PageRank <input> <base output> <# of iterations>");
             System.exit(1);
         }
 
