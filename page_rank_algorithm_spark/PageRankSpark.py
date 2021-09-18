@@ -48,7 +48,7 @@ if __name__ == "__main__":
 
     text = sc.textFile(input_file_name)
 
-   #counting the nodes (pages) of the input document
+    #counting the nodes (pages) of the input document
     node_number = text.count()
 
     #call the findTitleAndLinks function on the document to select titles and links
@@ -60,10 +60,10 @@ if __name__ == "__main__":
     node_rank_rdd = title_links_rdd.map(lambda line : (line[0], line[1], initial_page_rank)).cache()
 
     for i in range(iterations_number):
-      # Call the contributeCalculus function to calculate the contribution each node would make to its links
+        # Call the contributeCalculus function to calculate the contribution each node would make to its links
         contribute_ranking_rdd = node_rank_rdd.map(lambda line : contributeCalculus(line))
 
-  # Call the getLinkContribution function to associate the contribution it receives with each link
+         # Call the getLinkContribution function to associate the contribution it receives with each link
         link_contribution_association_rdd = contribute_ranking_rdd.flatMap(lambda line : getLinkContribution(line))
 
         #Group the nodes that have the same key (the same name) and add the partial page_ranks; then I calculate the ranking with rankingcalculus
