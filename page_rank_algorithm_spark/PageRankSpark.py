@@ -69,7 +69,7 @@ if __name__ == "__main__":
         #Group the nodes that have the same key (the same name) and add the partial page_ranks; then I calculate the ranking with rankingcalculus
         somma_rdd = link_contribution_association_rdd.reduceByKey(lambda x, y : x + y).map(lambda line : rankingcalculus(line))
 
-        # Join the newly calculated ranks with the nodes nobody points to (they don't receive any contribution of page_rank from other nodes so their value remains constant)
+        # Join the newly calculated ranks with the nodes nobody points to (they don't receive any contribution of page_rank from other nodes so their page_rank remains constant)
         node_rank_rdd = title_links_rdd.leftOuterJoin(somma_rdd).map(lambda line : rewrite(line))
 
     # Sort in descending order according to rank and output node + page_rank
