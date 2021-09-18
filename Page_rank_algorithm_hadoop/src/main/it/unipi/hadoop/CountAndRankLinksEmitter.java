@@ -113,7 +113,7 @@ public class CountAndRankLinksEmitter {
         conf.set("mapred.textoutputformat.separator", ":::"); // set OUTPUT_SEPARATOR as separator
         //conf.set("stream.map.output.field.separator", "::");
         // instantiate job
-        final Job job = new Job(conf, "Count");
+        final Job job = new Job(conf, "Parse");
         job.setJarByClass(Count.class);
         //job.setNumReduceTasks(5);
 
