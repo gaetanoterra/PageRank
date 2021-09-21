@@ -1,6 +1,5 @@
 import re
 import sys
-from operator import add
 from pyspark import SparkContext
 
 #function that selects title and links of each node, returns => title, links
