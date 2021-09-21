@@ -54,7 +54,7 @@ if __name__ == "__main__":
     initial_page_rank = 1/node_number
 
   # I reorder the data by putting node_name, links, initial_page_rank
-    node_rank_rdd = title_links_rdd.map(lambda line : (line[0], line[1], initial_page_rank)).cache()
+    node_rank_rdd = title_links_rdd.map(lambda line : (line[0], line[1], initial_page_rank))
 
     for i in range(iterations_number):
         # Call the contributeCalculus function to calculate the contribution each node would make to its links
