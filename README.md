@@ -1,6 +1,6 @@
 # PageRank
 
-For Hadoop Page Rank running:
+# For Hadoop Page Rank running:
 
 1) open the VM with the IP = 172.16.3.166
 2) go on hadoop with ssh hadoop@172.16.3.166
