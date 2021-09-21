@@ -70,12 +70,12 @@ public class RankingCalculation {
                     links = v;
             }
 
-            page_rank = alpha*((double)1/page_number) + (1 - alpha)*page_rank;
+            Double final_page_rank = alpha*((double)1/page_number) + (1 - alpha)*page_rank;
 
             if(links.equals(""))
-                output = page_rank + "";
+                output = final_page_rank + "";
             else
-                output = page_rank + ":::" + links;
+                output = final_page_rank + ":::" + links;
 
             context.write(key, new Text(output));
         }
