@@ -114,7 +114,7 @@ public class CountAndRankLinksEmitter {
         //conf.set("stream.map.output.field.separator", "::");
         // instantiate job
         final Job job = new Job(conf, "Parse");
-        job.setJarByClass(Count.class);
+        job.setJarByClass(CountAndRankLinksEmitter.class);
         //job.setNumReduceTasks(5);
 
         // set mapper/reducer
