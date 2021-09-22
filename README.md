@@ -10,7 +10,7 @@ Instructions for the page rank algorithm applications running
 4) start-yarn.sh
 5) go into the pagerank folder -> cd pagerank
 6) compile the code with -> mvn clean package
-7) run of the application passing parameters "input name", "output name", "alpha", "iterations" -> hadoop jar target/pagerank-1.0-SNAPSHOT.jar it.unipi.hadoop.PageRank synthetic.txt output 10
+7) run of the application passing parameters "input name", "output name", "iterations" -> hadoop jar target/pagerank-1.0-SNAPSHOT.jar it.unipi.hadoop.PageRank synthetic.txt output 10
 8) to read the output -> hadoop fs -cat output/sort/part* | head
 
 # For Spark page rank running:
