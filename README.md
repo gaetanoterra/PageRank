@@ -20,5 +20,5 @@ Instructions for the page rank algorithm applications running
 3) start-dfs.sh
 4) start-yarn.sh
 5) go into the pagerank folder for spark application -> cd pagerank_spark
-6) run of the application passing parameters "input name", "alpha", "iterations" -> spark-submit PageRankSpark.py synthetic.txt 0.15 10
-7) to read the output -> hadoop fs -cat spark-output/part* | head
+6) run of the application passing parameters "input name", "output name", "alpha", "iterations" -> spark-submit PageRankSpark.py synthetic.txt spark_output 0.15 10
+7) to read the output -> hadoop fs -cat output_name/part* | head
